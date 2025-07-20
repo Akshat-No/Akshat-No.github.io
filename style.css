@@ -68,6 +68,7 @@ header p {
   display: flex;
   gap: 15px;
   font-size: 1.5rem;
+  justify-content: center;
 }
 
 .social-icons a {
