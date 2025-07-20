@@ -28,7 +28,7 @@ header h1 {
 header p {
   font-size: 1.2rem;
   color: #ccc;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .profile-image {
@@ -114,5 +114,15 @@ footer a {
 }
 
 footer a:hover {
+  text-decoration: underline;
+}
+
+.back-link a {
+  color: #ccc;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.back-link a:hover {
   text-decoration: underline;
 }
