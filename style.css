@@ -90,6 +90,16 @@ section h2 {
   margin-bottom: 1rem;
 }
 
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
 footer {
   background: #f8f8f8;
   text-align: center;
