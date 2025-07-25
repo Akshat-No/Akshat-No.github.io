@@ -349,7 +349,7 @@ a:hover {
   }
 }
 
-/* === Additional CSS ONLY for Social Media Logos === */
+/* === Additions for Social Media Logo Styling === */
 
 .social-icons a {
   display: inline-flex;
@@ -357,14 +357,16 @@ a:hover {
   justify-content: center;
   width: 38px;
   height: 38px;
-  padding: 0; /* override padding from previous */
-  font-size: 1.3rem; /* for Font Awesome icons */
+  padding: 0; /* remove padding to better fit SVG and fontawesome icons */
+  font-size: 1.3rem; /* controls fontawesome icon size */
 }
 
 .social-icons svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
+  width: 23px;
+  height: 23px;
+  display: inline;
+  vertical-align: middle;
+  fill: currentColor; /* colors icon with parent link color */
 }
 
 .social-icons a:hover,
