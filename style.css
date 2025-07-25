@@ -123,6 +123,7 @@ a:hover {
   text-decoration: none;
 }
 
+/* Brand-specific hovers */
 .social-icons a[href*="x.com"]:hover,
 .social-icons a[href*="twitter"]:hover {
   background: #000000;
@@ -134,6 +135,10 @@ a:hover {
 
 .social-icons a[href*="scholar"]:hover {
   background: #4285f4;
+}
+
+.social-icons a[href*="researchgate.net"]:hover {
+  background: #00CCBB; /* ResearchGate teal */
 }
 
 .social-icons a[title*="X"] {
