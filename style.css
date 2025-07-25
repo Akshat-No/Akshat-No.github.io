@@ -1,3 +1,5 @@
+/* === Your Original CSS Below (Unchanged) === */
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -345,4 +347,29 @@ a:hover {
     font-size: 1.2rem;
     margin-right: 0.8rem;
   }
+}
+
+/* === Additional CSS ONLY for Social Media Logos === */
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0; /* override padding from previous */
+  font-size: 1.3rem; /* for Font Awesome icons */
+}
+
+.social-icons svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+  color: #fff;
+  transform: translateY(-2px);
+  outline: none;
 }
