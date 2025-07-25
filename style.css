@@ -170,151 +170,34 @@ a:hover {
   color: #333;
 }
 
-/* Content Section Styles for Other Pages */
-.content-section {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 3rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-.page-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.page-header h1 {
-  font-size: 2.5rem;
-  font-family: 'Playfair Display', serif;
-  color: #1e293b;
-  margin-bottom: 0.5rem;
-}
-
-.page-subtitle {
-  font-size: 1.1rem;
-  color: #64748b;
-  font-weight: 400;
-}
-
-.card-list {
-  display: grid;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.card {
-  display: flex;
-  align-items: flex-start;
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: 1px solid rgba(226, 232, 240, 0.8);
-}
-
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-}
-
-.card-icon {
-  flex-shrink: 0;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #0070f3, #00a8ff);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 1.2rem;
-  font-size: 2rem;
-}
-
-.card-content h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #1e293b;
-  margin: 0 0 0.5rem 0;
-  font-family: 'Inter', sans-serif;
-}
-
-.card-content p {
-  font-size: 1rem;
-  color: #64748b;
-  margin: 0;
-  line-height: 1.5;
-}
-
-.contact-section {
-  text-align: center;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(226, 232, 240, 0.8);
-}
-
-.email-link {
-  font-size: 1.1rem;
-  color: #64748b;
-}
-
-.email-link a {
-  color: #0070f3;
-  font-weight: 600;
-}
-
-.email-link a:hover {
-  color: #005bd1;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
   }
-  
+
   .navbar ul {
     gap: 1rem;
     justify-content: center;
   }
-  
+
   .hero {
     flex-direction: column;
     padding: 2rem 5%;
     text-align: center;
   }
-  
+
   .hero-text {
     padding-right: 0;
     margin-bottom: 2rem;
   }
-  
+
   .hero h1 {
     font-size: 2.5rem;
   }
-  
+
   .social-icons a {
     margin-bottom: 0.5rem;
-  }
-  
-  .content-section {
-    margin: 1rem;
-    padding: 2rem 1.5rem;
-  }
-  
-  .page-header h1 {
-    font-size: 2rem;
-  }
-  
-  .card {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .card-icon {
-    margin-right: 0;
-    margin-bottom: 1rem;
   }
 }
 
@@ -323,30 +206,12 @@ a:hover {
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-  
+
   .hero h1 {
     font-size: 2rem;
   }
-  
+
   .hero h2 {
     font-size: 1.3rem;
-  }
-  
-  .content-section {
-    padding: 1.5rem 1rem;
-  }
-  
-  .page-header h1 {
-    font-size: 1.8rem;
-  }
-  
-  .profile-image {
-    width: 180px;
-    height: 180px;
-  }
-  
-  .social-icons a {
-    font-size: 1.2rem;
-    margin-right: 0.8rem;
   }
 }
