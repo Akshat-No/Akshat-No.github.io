@@ -349,7 +349,10 @@ a:hover {
   }
 }
 
-/* === Additions for Social Media Logo Styling === */
+/* Social Icons Styling */
+.social-icons {
+  margin-top: 1.5rem;
+}
 
 .social-icons a {
   display: inline-flex;
@@ -357,16 +360,15 @@ a:hover {
   justify-content: center;
   width: 38px;
   height: 38px;
-  padding: 0; /* remove padding to better fit SVG and fontawesome icons */
-  font-size: 1.3rem; /* controls fontawesome icon size */
-}
-
-.social-icons svg {
-  width: 23px;
-  height: 23px;
-  display: inline;
-  vertical-align: middle;
-  fill: currentColor; /* colors icon with parent link color */
+  margin-right: 1.2rem;
+  padding: 0; /* Remove padding to perfectly fit icons */
+  color: #444;
+  background: #f8f9fa;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  font-size: 1.4rem; /* Controls Font Awesome icon size */
 }
 
 .social-icons a:hover,
@@ -375,3 +377,28 @@ a:hover {
   transform: translateY(-2px);
   outline: none;
 }
+
+/* Brand-specific hover backgrounds */
+.social-icons a[href*="x.com"]:hover,
+.social-icons a[href*="twitter"]:hover {
+  background: #000000;
+}
+
+.social-icons a[href*="linkedin"]:hover {
+  background: #0077b5;
+}
+
+/* Google Scholar hover background */
+.social-icons a[href*="scholar"]:hover,
+.social-icons a[href*="google-scholar"]:hover {
+  background: #4285f4;
+}
+
+/* ResearchGate hover background */
+.social-icons a[href*="researchgate"]:hover {
+  background: #00CCBB;
+}
+
+/* === End of social icons specific CSS === */
+
+/* ALL your other CSS styles remain untouched and exactly as before */
