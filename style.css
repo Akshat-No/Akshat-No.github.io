@@ -163,11 +163,12 @@ a:hover {
   background: #0077b5;
 }
 
-.social-icons a[href*="scholar"]:hover {
+.social-icons a[href*="scholar"]:hover,
+.social-icons a[href*="google-scholar"]:hover {
   background: #4285f4;
 }
 
-.social-icons a[href*="researchgate.net"]:hover {
+.social-icons a[href*="researchgate"]:hover {
   background: #00CCBB; /* ResearchGate teal */
 }
 
@@ -444,3 +445,29 @@ a:hover {
   font-size: 1.4rem;
 }
 
+/* === Hero Greeting Entrance Animation === */
+.hero-greeting {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroGreetingIn 1.1s cubic-bezier(.68,-0.25,.32,1.25) 0.2s forwards;
+}
+@keyframes heroGreetingIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fancy pop-in for name */
+.animated-name {
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0.9) rotate(-3deg);
+  animation: namePop 1s cubic-bezier(.32,1.72,.44,.85) 1s forwards;
+}
+@keyframes namePop {
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
