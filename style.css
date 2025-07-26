@@ -36,14 +36,32 @@ a:hover {
   padding: 0;
 }
 
+/* === ANIMATED NAVBAR UNDERLINE EFFECT === */
 .navbar li a {
+  position: relative; /* Add for underline effect */
   font-weight: bold;
   color: #0070f3;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
-
-.navbar li a:hover {
+.navbar li a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -4px;
+  height: 2px;
+  background: #0070f3;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.25s cubic-bezier(.51,1.17,.79,1);
+  transform-origin: right;
+}
+.navbar li a:hover,
+.navbar li a:focus {
   color: #005bd1;
+}
+.navbar li a:hover::after,
+.navbar li a:focus::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 /* Hero Section Styling */
@@ -84,6 +102,7 @@ a:hover {
   max-width: 600px;
 }
 
+/* === ANIMATED BUTTON HOVER === */
 .btn {
   display: inline-block;
   background: #0070f3;
@@ -91,15 +110,21 @@ a:hover {
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition:
+    background 0.3s, 
+    transform 0.18s cubic-bezier(.57,1.47,.65,1.2),
+    box-shadow 0.18s;
+  box-shadow: 0 2px 8px rgba(0,112,243,0.05);
+  position: relative;
+  cursor: pointer;
 }
-
 .btn:hover {
   background: #005bd1;
   text-decoration: none;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 8px 20px rgba(0,112,243,0.12);
 }
 
-/* Social Icons Styling */
 .social-icons {
   margin-top: 1.5rem;
 }
@@ -113,15 +138,18 @@ a:hover {
   background: #f8f9fa;
   border-radius: 8px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(.68,-0.25,.47,1.25);
   font-weight: 600;
   min-width: 2.5rem;
   text-align: center;
 }
 
-.social-icons a:hover {
+/* === ANIMATED SOCIAL ICONS === */
+.social-icons a:hover,
+.social-icons a:focus {
   color: #fff;
-  transform: translateY(-2px);
+  transform: scale(1.2) translateY(-2px) rotate(-3deg);
+  box-shadow: 0 4px 16px 0 rgba(0,112,243,0.15);
   text-decoration: none;
 }
 
@@ -209,13 +237,25 @@ a:hover {
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: 1px solid rgba(226, 232, 240, 0.8);
+  transition:
+    box-shadow 0.25s cubic-bezier(.22,.61,.36,1),
+    transform 0.22s cubic-bezier(.22,.61,.36,1);
+  will-change: transform;
 }
 
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+/* === ANIMATED CARD HOVER === */
+.card:hover,
+.card:focus-within {
+  transform: translateY(-6px) scale(1.025);
+  box-shadow: 0 16px 36px 0 rgba(0,112,243,0.09), 0 2px 8px rgba(0,0,0,0.02);
+  z-index: 2;
+}
+/* === Card icon "jump" on card hover === */
+.card:hover .card-icon,
+.card:focus-within .card-icon {
+  transform: scale(1.13) rotate(-8deg);
+  transition: transform 0.22s cubic-bezier(.31,1.26,.47,1.24);
 }
 
 .card-icon {
@@ -229,6 +269,8 @@ a:hover {
   justify-content: center;
   margin-right: 1.2rem;
   font-size: 2rem;
+  color: #fff;
+  transition: transform 0.22s cubic-bezier(.31,1.26,.47,1.24);
 }
 
 .card-content h3 {
@@ -374,7 +416,7 @@ a:hover {
 .social-icons a:hover,
 .social-icons a:focus {
   color: #fff;
-  transform: translateY(-2px);
+  transform: scale(1.2) translateY(-2px) rotate(-3deg);
   outline: none;
 }
 
@@ -388,17 +430,17 @@ a:hover {
   background: #0077b5;
 }
 
-/* Google Scholar hover background */
 .social-icons a[href*="scholar"]:hover,
 .social-icons a[href*="google-scholar"]:hover {
   background: #4285f4;
 }
 
-/* ResearchGate hover background */
 .social-icons a[href*="researchgate"]:hover {
   background: #00CCBB;
 }
 
-/* === End of social icons specific CSS === */
+.social-icons svg,
+.social-icons i {
+  font-size: 1.4rem;
+}
 
-/* ALL your other CSS styles remain untouched and exactly as before */
